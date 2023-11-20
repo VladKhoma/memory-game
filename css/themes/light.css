@@ -1,0 +1,19 @@
+:root {
+    --page-background-color: #e5e5e5;
+    --text-color: #333333;
+    --title-color: #555555;
+    --text-error-color: #cc2e20;
+    --settings-modal-error-border-color: #cc2e20;
+    --range-input-thumb-background-color: #ababab;
+    --settings-modal-border-color: #000;
+    --button-background-color: #0088FF;
+    --switch-background-color: #0088FF;
+    --button-hover-background-color: #0077E0;
+    --button-active-background-color: #0055A0;
+    --button-disabled-background-color: #03417a;
+    --button-text-color: #FFFFFF;
+    --front-card-color-background-color: #b2b2b2;
+    --back-card-color-background-color: #c4c4c4;
+    --gamezone-background-color: #FFFFFF;
+    --modal-background-color: #FFFFFF;
+}

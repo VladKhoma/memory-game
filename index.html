@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" id="theme__link" href="css/themes/light.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Memory Game</title>
+
+</head>
+<body>
+<div class="container">
+    <div class="menu__container">
+        <div class="menu">
+            <h1 class="menu__title">Memory game</h1>
+            <button type="button" class="button" id="start__button">Start</button>
+            <button type="button" class="button" id="settings__button">Game Settings</button>
+        </div>
+    </div>
+
+    <div class="game__container hidden">
+        <snap id="timer"></snap>
+
+        <div class="grid__container"></div>
+
+        <div class="game__control__buttons">
+            <button class="button" id="restart__button">Restart</button>
+            <button class="button" id="exit__button">Exit</button>
+        </div>
+    </div>
+
+    <div class="settings hidden">
+        <div class="settings__inputs__container">
+            <div class="input__range">
+                <label for="card__width">Cards width - 50px</label>
+                <input type="range" id="card__width" name="card__width" min="50" max="100" value="50" step="5">
+            </div>
+            <div class="input__range">
+                <label for="card__height">Cards height - 50px</label>
+                <input type="range" id="card__height" name="card__height" min="50" max="100" value="50" step="5">
+            </div>
+            <div class="input__range">
+                <label for="rows">Rows - 2</label>
+                <input type="range" id="rows" name="rows" min="2" max="6" value="2" step="1">
+            </div>
+            <div class="input__range">
+                <label for="columns">Columns - 2</label>
+                <input type="range" id="columns" name="columns" min="2" max="6" value="2" step="1">
+            </div>
+            <div class="input__range">
+                <label for="time__limit">Time limit - 60s</label>
+                <input type="range" id="time__limit" name="time__limit" min="10" max="60" value="60" step="5">
+            </div>
+            <div class="switch__container">
+                <span class="theme__mode">Light Theme</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <button class="button" id="close__settings">Close</button>
+    </div>
+
+    <div class="modal hidden">
+        <span class="modal__title"></span>
+        <div class="game__logs">
+            <span class="modal__logs__text">Score: <span id="score">0</span></span>
+            <span class="modal__logs__text">moves: <span id="moves">0</span></span>
+        </div>
+        <span class="modal__text"></span>
+        <div class="modal__buttons__container">
+            <button id="play__again__button" class="button">Play Again</button>
+            <button id="exit__to__menu_button" class="button">Exit</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/helpers.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
